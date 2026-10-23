@@ -3,142 +3,284 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erich | Web Developer</title>
-  <meta name="description" content="Erich, a BSIT student building full-stack web projects with PHP, Flask, and JavaScript. Open for freelance.">
+  <title>Erich | Developer & Designer</title>
+  <meta name="description" content="I'm Erich, a BSIT student building web applications, interfaces, and creative digital projects.">
+  <meta name="theme-color" content="#e6ebf2">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-
-  <header class="site">
-    <div class="wrap">
-      <a class="brand" href="#home">Erich</a>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#activities">Activities</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Erich, home">
+      <span class="brand-mark">E.</span>
+      <span>PORT<span class="brand-period">/</span>FOLIO</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#activities">Activities</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="mailto:eyritch.official@gmail.com">LET'S TALK <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span>
+    </button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#projects">Projects <span>01 ↗</span></a>
+      <a href="#activities">Activities <span>02 ↗</span></a>
+      <a href="#about">About <span>03 ↗</span></a>
+      <a href="#contact">Contact <span>04 ↗</span></a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="wrap">
+  <main id="home">
+    <section class="hero section-pad">
+      <div class="hero-top">
+        <span class="eyebrow"><span class="status-dot"></span>BSIT STUDENT · WEB DEVELOPER</span>
+        <span class="hero-index">PORTFOLIO — 2026</span>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Building<br>things for<br><span class="accent-text">the web<span class="hero-star">✳</span></span></h1>
+          <div class="hero-bottom">
+            <p class="hero-description">
+              I’m <b style="font-size: x-large;">Lance Jerich Macaspac</b>, a developer exploring the space between <strong>functional code</strong> and <strong>thoughtful design.</strong>
+            </p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#projects">EXPLORE MY WORK <span>↘</span></a>
+              <a class="text-link" href="#about">A LITTLE ABOUT ME ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="portrait-frame">
+            <img src="assets/images/profile.jpg" alt="Portrait of Erich" fetchpriority="high">
+            <span class="portrait-label">FIG. 001 — THE DEVELOPER</span>
+          </div>
+          <div class="floating-note note-top">
+            <span class="note-symbol">✳</span>
+            <span>DESIGN<br>MEETS CODE</span>
+          </div>
+          <div class="floating-note note-bottom">
+            <span class="note-number">01—04</span>
+            <span>SCROLL TO EXPLORE ↓</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-ticker" aria-hidden="true"><div class="ticker-track"></div></div>
+    </section>
+
+    <section class="projects-section section-pad" id="projects">
+      <div class="section-heading reveal">
         <div>
-          <h1>Hi, I’m Erich. This website is on maintenance.</h1>
-          <div class="btns">
-            <a class="btn primary" href="#projects">See projects</a>
-            <a class="btn" href="mailto:eyritch.official@gmail.com">Email me</a>
-          </div>
+          <span class="eyebrow">01 / SELECTED WORK</span>
+          <h2>A few things<br>I've <span class="accent-text">made.</span></h2>
         </div>
-        <img src="assets/images/profile.jpg" alt="Portrait of Erich">
+        <p class="section-intro">Different ideas, different tools. Here's a look at what I've been building, designing, and experimenting with.</p>
+      </div>
+      <div class="project-toolbar reveal">
+        <span class="toolbar-label">BROWSE THE ARCHIVE</span>
+        <div class="filter-group" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">ALL <span>05</span></button>
+          <button class="filter-btn" data-filter="development" aria-pressed="false">DEV</button>
+          <button class="filter-btn" data-filter="design" aria-pressed="false">DESIGN & 3D</button>
+        </div>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-large reveal" data-category="development">
+          <div class="project-image" role="button" tabindex="0" aria-label="Expand Farm2Go screenshot">
+            <img src="assets/images/projects/farm2u.png" alt="Farm2Go e-commerce website screenshot" loading="lazy">
+            <span class="image-index">PROJECT 001</span><span class="image-arrow">+</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-type">WEB DEVELOPMENT</span>
+              <h3>Farm2Go<span class="project-period">®</span></h3>
+              <p>An e-commerce platform connecting farmers and buyers. I worked on the back end.</p>
+            </div>
+            <div class="project-footer">
+              <div class="tags"><span>PHP</span><span>HTML</span><span>JavaScript</span></div>
+              <a class="project-link" href="https://maerich0.github.io/Farm2U/" target="_blank" rel="noopener noreferrer">LIVE SITE ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card project-tall reveal" data-category="development">
+          <div class="project-image" role="button" tabindex="0" aria-label="Expand MEOO Museum screenshot">
+            <img src="assets/images/projects/meoo.png" alt="MEOO Museum website screenshot" loading="lazy">
+            <span class="image-index">PROJECT 002</span><span class="image-arrow">+</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-type">WEB DEVELOPMENT</span>
+              <h3>MEOO Museum</h3>
+              <p>A website for the Museum for Extraordinary Ordinary Objects. Designed and built by me.</p>
+            </div>
+            <div class="project-footer">
+              <div class="tags"><span>Flask</span><span>SQLite</span><span>HTML</span></div>
+              <span class="project-note">LOCAL PROJECT</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="design">
+          <div class="project-image" role="button" tabindex="0" aria-label="Expand Calling Card screenshot">
+            <img src="assets/images/projects/callingcard.png" alt="Calling card design created in Figma" loading="lazy">
+            <span class="image-index">PROJECT 003</span><span class="image-arrow">+</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-type">GRAPHIC DESIGN</span>
+              <h3>Calling Card</h3>
+              <p>A class exercise in designing a calling card for a fictional company.</p>
+            </div>
+            <div class="project-footer">
+              <div class="tags"><span>Figma</span></div>
+              <a class="project-link" href="https://www.figma.com/design/w9urgNir7OVr35aRJ52pFx/Logo?node-id=0-1&amp;t=PhXZy4XZujwLrB7R-1" target="_blank" rel="noopener noreferrer">VIEW DESIGN ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="design">
+          <div class="project-image" role="button" tabindex="0" aria-label="Expand Pixel 10 Pro XL model">
+            <img src="assets/images/projects/pixel.png" alt="Blender model of a Google Pixel 10 Pro XL" loading="lazy">
+            <span class="image-index">PROJECT 004</span><span class="image-arrow">+</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-type">3D MODELING</span>
+              <h3>Pixel 10 Pro XL</h3>
+              <p>A Blender phone model created as a blank template for design experiments.</p>
+            </div>
+            <div class="project-footer">
+              <div class="tags"><span>Blender</span><span>3D</span></div>
+              <span class="project-note">PERSONAL PROJECT</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="design">
+          <div class="project-image" role="button" tabindex="0" aria-label="Expand 3D Physics prototype">
+            <img src="assets/images/projects/3dphysics.png" alt="3D physics prototype with a red ball" loading="lazy">
+            <span class="image-index">PROJECT 005</span><span class="image-arrow">+</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-type">PROTOTYPING</span>
+              <h3>3D Physics</h3>
+              <p>A class activity exploring a 3D physics concept through a Figma prototype.</p>
+            </div>
+            <div class="project-footer">
+              <div class="tags"><span>Figma</span><span>Prototyping</span></div>
+              <a class="project-link" href="https://www.figma.com/design/6sRAYtJyzGE49o1ub2QRs2/Untitled?t=PhXZy4XZujwLrB7R-1" target="_blank" rel="noopener noreferrer">VIEW PROTOTYPE ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="archive-footer reveal">
+        <span>END OF CURRENT ARCHIVE</span>
+        <span>MORE IDEAS IN PROGRESS <span class="accent-text">✳</span></span>
       </div>
     </section>
 
-    <section id="projects">
-      <div class="wrap">
-        <h2>Projects</h2>
-
-        <h3>Development</h3>
-        <article class="project">
-          <img src="assets/images/projects/farm2u.png" alt="Farm2Go website screenshot" loading="lazy">
-          <div>
-            <h4>Farm2Go</h4>
-            <p>E-commerce platform connecting farmers and buyers. I built the back end.</p>
-            <p class="meta">PHP, HTML, JavaScript</p>
-            <a href="https://maerich0.github.io/Farm2U/" target="_blank" rel="noopener">View live site</a>
+    <section class="activities-section section-pad" id="activities">
+      <div class="section-heading reveal">
+        <div>
+          <span class="eyebrow">02 / WEB DEVELOPMENT ACTIVITIES</span>
+          <h2>Learning by<br><span class="accent-text">building.</span></h2>
+        </div>
+        <p class="section-intro">Web development activities. Take a look!</p>
+      </div>
+      <div class="activity-grid">
+        <a class="activity-card activity-feature" href="activities/Bento%20Grids/" aria-label="Open Bento Grids activity">
+          <span class="activity-number">001</span>
+          <span class="activity-art" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <div class="activity-bottom">
+            <div>
+              <span class="project-type">LAYOUT EXPERIMENT</span>
+              <h3>Bento Grids</h3>
+              <p>Exploring composition through modular layouts.</p>
+            </div>
+            <span class="activity-arrow" aria-hidden="true">↗</span>
           </div>
-        </article>
-        <article class="project">
-          <img src="assets/images/projects/meoo.png" alt="MEOO Museum website screenshot" loading="lazy">
-          <div>
-            <h4>MEOO Museum Website</h4>
-            <p>Website for the Museum for Extraordinary Ordinary Objects. Designed and built by me.</p>
-            <p class="meta">HTML, Flask, SQLite. Runs locally, not hosted</p>
+          <span class="activity-link-label">EXPLORE ACTIVITY ↗</span>
+        </a>
+        <a class="activity-card activity-api" href="activities/JSON%20API/" aria-label="Open JSON API activity">
+          <span class="activity-number">002</span>
+          <span class="api-symbol" aria-hidden="true">{ }</span>
+          <div class="activity-bottom">
+            <div>
+              <span class="project-type">API EXPERIMENT</span>
+              <h3>JSON API</h3>
+              <p>Fetching and displaying data from an external JSON API.</p>
+            </div>
+            <span class="activity-arrow" aria-hidden="true">↗</span>
           </div>
-        </article>
-
-        <h3>Design and 3D</h3>
-        <article class="project">
-          <img src="assets/images/projects/callingcard.png" alt="Calling card design" loading="lazy">
-          <div>
-            <h4>Calling Card</h4>
-            <p>Class activity: a calling card for “your company.”</p>
-            <p class="meta">Figma</p>
-            <a href="https://www.figma.com/design/w9urgNir7OVr35aRJ52pFx/Logo?node-id=0-1&amp;t=PhXZy4XZujwLrB7R-1" target="_blank" rel="noopener">View in Figma</a>
-          </div>
-        </article>
-        <article class="project">
-          <img src="assets/images/projects/pixel.png" alt="Blender model of the Google Pixel 10 Pro XL" loading="lazy">
-          <div>
-            <h4>Google Pixel 10 Pro XL Model</h4>
-            <p>Personal project: a Blender model made as a blank phone template for designs.</p>
-            <p class="meta">Blender. Local file, not uploaded</p>
-          </div>
-        </article>
-        <article class="project">
-          <img src="assets/images/projects/3dphysics.png" alt="3D physics prototype with a red ball" loading="lazy">
-          <div>
-            <h4>3D Physics</h4>
-            <p>Class activity: a Figma prototype experiment.</p>
-            <p class="meta">Figma</p>
-            <a href="https://www.figma.com/design/6sRAYtJyzGE49o1ub2QRs2/Untitled?t=PhXZy4XZujwLrB7R-1" target="_blank" rel="noopener">View in Figma</a>
-          </div>
-        </article>
+          <span class="activity-link-label">VIEW ACTIVITY ↗</span>
+        </a>
       </div>
     </section>
 
-    <section id="activities">
-      <div class="wrap">
-        <h2>Activities</h2>
-        <div class="row">
-          <div>
-            <h4>Bento Grid</h4>
-            <p>A bento-style grid layout.</p>
-          </div>
-          <a href="activities/Bento Grids/">Open activity</a>
+    <section class="about-section section-pad" id="about">
+      <div class="about-grid">
+        <div class="about-heading reveal">
+          <span class="eyebrow">03 / THE PERSON BEHIND THE PIXELS</span>
+          <h2>Curious by<br>nature.<br><span class="accent-text">Developer</span><br>by practice.</h2>
+          <span class="about-stamp">STUDENT<br>BUILDING<br>THE FUTURE ↗</span>
         </div>
-        <div class="row">
-          <div>
-            <h4>JSON API</h4>
-            <p>Fetching and displaying data from a JSON API.</p>
+        <div class="about-content reveal">
+          <p class="about-lead">
+            I'm a BSIT student at the Polytechnic University of the Philippines, learning how ideas become useful digital experiences.
+          </p>
+          <p class="about-description">
+            I enjoy working across the stack, from designing interfaces and writing application logic to connecting databases and figuring out why something refuses to work five minutes before a deadline.
+          </p>
+          <div class="skills-list">
+            <div class="skill-row"><span class="skill-label">01 / FRONT END</span><div class="skill-values"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div></div>
+            <div class="skill-row"><span class="skill-label">02 / BACK END</span><div class="skill-values"><span>PHP</span><span>Python</span><span>Flask</span><span>Node.js</span></div></div>
+            <div class="skill-row"><span class="skill-label">03 / DATABASES</span><div class="skill-values"><span>MySQL</span><span>SQLite</span><span>PostgreSQL</span></div></div>
+            <div class="skill-row"><span class="skill-label">04 / CREATIVE TOOLS</span><div class="skill-values"><span>Git</span><span>Figma</span><span>Blender</span></div></div>
           </div>
-          <span class="meta">In progress</span>
+          <div class="about-note">
+            <span class="note-symbol">✳</span>
+            <p>Still learning. Still building. Always curious about what comes next.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="wrap">
-        <h2>About</h2>
-        <p>I’m a BSIT student at the Polytechnic University of the Philippines. I build web projects across the stack, from the interface to the database.</p>
-        <dl>
-          <dt>Front end</dt><dd>HTML, CSS, JavaScript, Bootstrap</dd>
-          <dt>Back end</dt><dd>PHP, MySQL, Python (Flask), SQLite, PostgreSQL, Node.js</dd>
-          <dt>Tools</dt><dd>Git, Figma, Blender</dd>
-        </dl>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <p>Open for freelance work. The best way to reach me is by email.</p>
-        <div class="btns">
-          <a class="btn primary" href="mailto:eyritch.official@gmail.com">eyritch.official@gmail.com</a>
-          <a class="btn" href="https://github.com/maerich0" target="_blank" rel="noopener">GitHub</a>
+    <section class="contact-section section-pad" id="contact">
+      <span class="eyebrow reveal">04 / HAVE SOMETHING IN MIND?</span>
+      <div class="contact-layout reveal">
+        <h2>Let's make<br>something<br><span>real.</span></h2>
+        <div class="contact-content">
+          <p>Have a project, an idea, or an opportunity? Let's talk about it.</p>
+          <a class="contact-email" href="mailto:eyritch.official@gmail.com">
+            eyritch.official@gmail.com <span>↗</span>
+          </a>
+          <div class="contact-links">
+            <a href="https://github.com/maerich0" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+          </div>
         </div>
       </div>
+      <div class="contact-decoration" aria-hidden="true">E.</div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">&copy; 2026 Erich</div>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">E.</span>
+      <span>ERICH<span class="brand-period">/</span>DEV</span>
+    </a>
+    <span>DESIGNED & BUILT WITH CURIOSITY.</span>
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    <span class="copyright">© 2026 ERICH</span>
   </footer>
 
+  <!-- IMAGE MODAL -->
+  <div id="image-modal" class="image-modal" aria-modal="true" role="dialog" hidden>
+    <button class="modal-close" aria-label="Close image">×</button>
+    <img id="modal-image" src="" alt="Expanded view">
+  </div>
 </body>
 </html>
